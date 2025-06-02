@@ -41,18 +41,20 @@ namespace Selenium_Automation
             sign_in.Click();
 
             IWebElement email_field = driver.FindElement(By.Id("fld-e"));
-            email_field.SendKeys("moniquenguyen425@gmail.com");
+            // For testing it's best to use an actual best buy email 
+            email_field.SendKeys("example@email.com");
 
             IWebElement submit = driver.FindElement(By.XPath("//button[@type='submit']"));
             submit.Click();
 
-            // Enters in my account linked last 4 digits
+            // For testing use an account that has MFA with a phone number and input
+            // the last 4 digits that are connectd to the account
             IWebElement digits = wait.Until(e => e.FindElement(By.Id("smsDigits")));
-            digits.SendKeys("2306");
+            digits.SendKeys("***");
 
-            // Enters my last name associated with account
+            // For testing enter the last name that is connected to the account for MFA
             IWebElement last_name = driver.FindElement(By.Id("lastName"));
-            last_name.SendKeys("Nguyen");
+            last_name.SendKeys("examplelastname");
 
             // Continue
             IWebElement continue_but = driver.FindElement(By.XPath("/html/body/div[1]/div/section/main/div[2]/div/div/div[1]/div/div/div/div/div/form/div[3]/button[1]"));

@@ -1,0 +1,21 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<TargetFramework>net8.0</TargetFramework>
+		<IsTestProject>true</IsTestProject>
+		<!-- ✅ ADD THIS -->
+		<RootNamespace>Selenium_Automation</RootNamespace>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<Nullable>enable</Nullable>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<PackageReference Include="NUnit" Version="4.3.2" />
+		<PackageReference Include="NUnit3TestAdapter" Version="5.0.0" />
+		<PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.9.0" />
+		<!-- ✅ ADD THIS -->
+		<PackageReference Include="Selenium.WebDriver" Version="4.33.0" />
+		<PackageReference Include="Selenium.WebDriver.ChromeDriver" Version="137.0.7151.5500" />
+	</ItemGroup>
+
+</Project>

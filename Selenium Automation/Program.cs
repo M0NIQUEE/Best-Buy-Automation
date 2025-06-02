@@ -42,6 +42,7 @@ namespace Selenium_Automation
 
             IWebElement email_field = driver.FindElement(By.Id("fld-e"));
             // For testing it's best to use an actual best buy email 
+            // ************* ENTER EMAIL HERE**********************
             email_field.SendKeys("example@email.com");
 
             IWebElement submit = driver.FindElement(By.XPath("//button[@type='submit']"));
@@ -50,10 +51,12 @@ namespace Selenium_Automation
             // For testing use an account that has MFA with a phone number and input
             // the last 4 digits that are connectd to the account
             IWebElement digits = wait.Until(e => e.FindElement(By.Id("smsDigits")));
+            // *************ENTER LAST 4 HERE **************************
             digits.SendKeys("1111");
 
             // For testing enter the last name that is connected to the account for MFA
             IWebElement last_name = driver.FindElement(By.Id("lastName"));
+            // ***********ENTER LAST NAME HERE **************************
             last_name.SendKeys("examplelastname");
 
             // Continue

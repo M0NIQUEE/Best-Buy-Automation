@@ -50,7 +50,7 @@ namespace Selenium_Automation
             // For testing use an account that has MFA with a phone number and input
             // the last 4 digits that are connectd to the account
             IWebElement digits = wait.Until(e => e.FindElement(By.Id("smsDigits")));
-            digits.SendKeys("***");
+            digits.SendKeys("1111");
 
             // For testing enter the last name that is connected to the account for MFA
             IWebElement last_name = driver.FindElement(By.Id("lastName"));
